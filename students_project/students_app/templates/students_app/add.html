@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add View</title>
+</head>
+
+<body>
+    <form action="{% url 'students_app:getAdd' %}" method="post"> 
+        {% csrf_token %}
+        <table>
+            {{ uf.as_table }}  
+        </table>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index View</title>
+
+    </head>
+
+    <body>
+        <h3 style="color: red;">ALL STUDENTS IN THE DATABASE</h3>
+        {% if student_list %}
+        <ul>
+            {% for student in student_list %}
+            <li>
+                <!-- <a href="/students_app/{{student.id}}/"></a> -->
+                <a href="{% url 'students_app:detail' student.id %}">
+                    {{ student.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+        <p style="color: red;">No students_app are valilable</p>
+        {% endif %}
+    </body>
+
+</html>

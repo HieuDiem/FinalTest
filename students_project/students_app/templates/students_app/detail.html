@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Detail View</title>
+    </head>
+
+    <body>
+        <h3 style="color: red;">A STUDENT'S INFORMATION IN THE DATABASE</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Address</td>
+                <td>Mobile_number</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for items in info_student %}
+            <tr>
+                <td>{{ items.id }}</td>
+                <td>{{ items.name }}</td>
+                <td>{{ items.age }}</td>
+                <td>{{ items.address }}</td>
+                <td>{{ items.mobile_number }}</td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+
+    </table>
+    </body>
+
+</html>
